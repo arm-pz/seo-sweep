@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "seo-sweep",
+  "version": "0.1.0",
+  "description": "Runs the Skillsmith SEO skills on a site you own, fixes what they find, proves each fix with a re-crawl, and turns every skill defect into a tested fix.",
+  "author": {
+    "name": "Abdul Rahman P Z",
+    "url": "https://github.com/arm-pz"
+  },
+  "homepage": "https://skillsmith.tech/seo-sweep/",
+  "repository": "https://github.com/arm-pz/seo-sweep",
+  "keywords": ["seo", "technical-seo", "agent-skills", "claude-code", "indexing"]
+}
