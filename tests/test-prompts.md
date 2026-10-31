@@ -31,3 +31,15 @@ Each entry gives a prompt, the setup, what a good response does, and what counts
 **Prompt:** "Two of my pages compete for 'cold wallet', which should win?"
 **Good:** hands off to `keyword-resolver` (or `keyword-guard` for the map alone).
 **Fail:** runs a full sweep.
+
+## Boundary pairs
+
+Judged by hand against the descriptions alone (tune-skill step 7).
+
+| Message | Should trigger | Why |
+|---|---|---|
+| "Fix the SEO on my site" | seo-sweep | changes the code and proves it |
+| "Audit my SEO and give me options, don't touch the code" | seo-polish | report plus rewrite options |
+| "My website doesn't show up when I search its name" | seo-sweep | a whole site, not a repo |
+| "Another repo with my skill's name ranks first on GitHub" | findable | repo discoverability |
+| "Just submit my new pages to the search engines" | get-indexed | submission only |

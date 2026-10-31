@@ -3,14 +3,13 @@ name: seo-sweep
 description: >-
   Runs the Skillsmith SEO skills on a site you own, in order, fixes what they
   find in the site's code, proves each fix with a re-crawl, and turns every
-  defect a skill shows along the way into a tested fix to that skill. Checks
-  indexation first, then crawls with seo-crawl, audits brand and task searches
-  with findable, settles query ownership with keyword-guard and rewrites with
-  wordsmith. Use when the user asks to "fix the SEO", "run the SEO skills on my
+  defect a skill shows along the way into a tested fix to that skill, chaining
+  seo-crawl, findable, keyword-guard, wordsmith and get-indexed. Use when the user asks to "fix the SEO", "run the SEO skills on my
   site", "why doesn't my site show up when I search its name", "my brand search
   shows other domains", "use the skillsmith skills on this site", or wants a site's
-  search problems fixed and the skills improved as they run. Not for a report-only
-  audit with rewrite options (use seo-polish), resolving cannibalization alone
+  search problems fixed and the skills improved as they run, even if they never
+  say "audit". Not for only submitting pages to search engines (use get-indexed),
+  a report-only audit with rewrite options (use seo-polish), resolving cannibalization alone
   (use keyword-resolver), repo or skill discoverability alone (use findable), or
   writing a new skill (use draft-skill).
 argument-hint: "[site URL] [path to the site's repo]"
@@ -44,7 +43,7 @@ Get the site URL and, if the fixes are to be made, the repo that builds it. A si
 
 ### 2. Indexation and brand baseline (findable)
 
-Follow `findable`'s `references/audit.md`, section 0 first:
+Follow `findable/references/audit.md` (in the findable skill), section 0 first:
 
 1. Search the exact domain, the homepage title in quotes, and the name plus the domain's word without the dot (`acme tech` for acme.tech).
 2. Record who ranks instead and which domains they hold.
@@ -56,7 +55,7 @@ Follow `findable`'s `references/audit.md`, section 0 first:
 node <seo-crawl>/scripts/seo-crawl.mjs --url https://example.com --max-pages 80 --out reports/baseline.json
 ```
 
-Read `checks` first: an inconclusive check is not a pass. Read each finding's evidence before acting on it, and check for known false positives (`seo-crawl`'s `references/checks.md`). A clean crawl means the technical layer is not the problem; say so and move on rather than inventing work.
+Read `checks` first: an inconclusive check is not a pass. Read each finding's evidence before acting on it, and check for known false positives (`seo-crawl/references/checks.md`). A clean crawl means the technical layer is not the problem; say so and move on rather than inventing work.
 
 Pages that render their content with JavaScript are invisible to the crawler. For those, read the page's built HTML yourself and say what a non-rendering crawler sees.
 
