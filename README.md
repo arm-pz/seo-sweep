@@ -14,6 +14,7 @@ npx skills add arm-pz/seo-crawl
 npx skills add arm-pz/findable
 npx skills add arm-pz/keyword-guard
 npx skills add arm-pz/wordsmith
+npx skills add arm-pz/get-indexed
 ```
 
 ## Use
@@ -28,7 +29,7 @@ Run the SEO skills on my site and improve them as you run them.
 
 - A baseline: whether the domain is indexed, who ranks for its name and its tasks, and a crawl with every check complete or explained.
 - Fixes in the site's code, in order of impact: indexability, content crawlers can read, brand and entity signals, then on-page copy.
-- Proof: a re-crawl compared by finding ID, plus the built HTML and a browser check.
+- Proof: a re-crawl compared by finding ID, plus the built HTML and a browser check. Then [get-indexed](https://github.com/arm-pz/get-indexed) tells search engines about the changed pages.
 - Skill fixes: each defect a skill showed on your site, with a test that failed before the fix and passes after, committed or exported as a patch.
 - `seo-sweep-report.md`, ending with the steps only you can take, such as Search Console and Bing Webmaster verification.
 
