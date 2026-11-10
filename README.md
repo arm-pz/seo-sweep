@@ -1,6 +1,6 @@
 # seo-sweep
 
-**An agent skill that fixes a site's SEO with the Skillsmith SEO skills, and fixes the skills as it goes.**
+**An agent skill that fixes a site's SEO with the Skillsmith by Caffeinity SEO skills, and fixes the skills as it goes.**
 
 Point it at a site you own. It checks whether search engines have the site indexed at all, crawls it with [seo-crawl](https://github.com/arm-pz/seo-crawl), audits brand and task searches with [findable](https://github.com/arm-pz/findable), settles which page owns each query with [keyword-guard](https://github.com/arm-pz/keyword-guard), and rewrites with [wordsmith](https://github.com/arm-pz/wordsmith). Then it changes the site's code, proves each fix with a re-crawl, and writes a report. When one of those skills gets something wrong on your site, it logs the defect, reproduces it as a failing test, and fixes the skill.
 
